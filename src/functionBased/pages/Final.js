@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 import { Link, useRouteMatch, Route } from "react-router-dom"
-import SinglePage from './SinglePage'
-import Box from '@material-ui/core/Box';
-import Logo from './image2vector.svg'
-import Video from "./video";
+import SinglePage from './SinglePage';
+import Final_Header from "../components/Final_Header";
 import Button from '../components/CustomButton.js'
 
-class Video_Screen extends Component {
+
+class Final extends Component {
   render() {
     return (
-      <div>
-        <Video />
-        <a href="https://react.school" target="_blank">
-  <Button> Link Button </Button>
-</a>
-      </div>
+        <div>
+          <Final_Header />
+  <button> <h2> Play again? </h2> <Link to = ".." > </Link> </button> 
+
+        </div>
+      
     );
   }
 }
 
-export default Video_Screen;
+  export default Final;

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './button.module.css';
 
-const Button = ({ children, onClick, btnColor = 'teal', labelColor, disabled, type, style, ...props }) => {
+const Button = ({ children, onClick, btnColor = "#a789ec", labelColor, disabled, type, style, ...props }) => {
     const [
         hover,
         setHover
