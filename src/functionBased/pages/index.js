@@ -1,19 +1,29 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import Video from './video';
+import Robin from './assets/Robin.mp4'
 
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
+const VIDEO = {
+  src:Robin,
+  type:'video/mp4'
+ };
 
-import Navigation from './components/Navbar';
-import Routes from './Routes';
+class App extends Component {
+   constructor(props){
+     super(props)
+     this.state = {
+       src: VIDEO.src,
+       type:VIDEO.type
+     }
+   }
 
-ReactDOM.render(
-    <Router>
-        <div className="App">
-            <Navigation />
-            <Routes />
-        </div>
-    </Router>,
-    document.getElementById('root')
-);
+   render(){
+     return(
+       <div>
+         <Video src={this.state.src} type={this.state.type}/>
+       </div>
+     )
+   }
+
+}
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -15,17 +15,30 @@ body {
 }
 
 img {
-  width: 110%;
+  width: 100%;
+}
+
+button a {
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .home_button {
   margin-top: 50px;
   padding: 50px;
-  background-color: #f0d8ec;
+  background-color: #a789ec;
 }
 
 .home_button {
-  color: #7b85e0;
+  color: #f0d8ec;
   border-radius: 10px;
   padding: 30px;
   margin: 25px 10px;
@@ -50,7 +63,7 @@ img {
 }
 
 .inner h1 {
-  background-color: #f0d8ec;
+  background-color: #a789ec;
   color: #7b85e0;
   display: flex;
   justify-content: center;
@@ -96,8 +109,12 @@ img {
   border: none;
 }
 
+video {
+  margin: 150px 100px;
+}
+
 .active-link {
-  color: orangered;
+  color: #24293e;
   text-decoration: underline;
 }
 
@@ -117,6 +134,7 @@ img {
   background: transparent;
   border: none;
   outline: none;
+  color: white;
 }
 
 .menuNav {
@@ -124,7 +142,7 @@ img {
   list-style: none;
   position: fixed;
   top: 0;
-  background: #f3ea5f;
+  background: #f0d8ec;
   left: 0;
   bottom: 0;
   height: 100vh;
@@ -142,7 +160,7 @@ a {
   display: block;
   padding: 10px 40px;
   text-decoration: none;
-  color: #3fffd2;
+  color: #7b85e0;
   text-transform: uppercase;
   font-weight: bold;
   outline: none;
@@ -152,26 +170,26 @@ a {
   margin-top: 7rem;
 }
 
-/* about page */
+/* Workout page */
 
-.about__content {
+.Workout__content {
   padding: 8rem 40px;
 }
 
-.about__list {
+.Workout__list {
   list-style: none;
   flex: 2;
   margin-right: 15px;
 }
 
-.about__list a {
+.Workout__list a {
   color: #9f9f9f;
   text-transform: capitalize;
   padding: 20px 0;
   font-weight: 600;
 }
 
-.about__list a:hover {
+.Workout__list a:hover {
   color: #000;
 }
 
@@ -210,5 +228,3 @@ a {
 .main__content p {
   line-height: 25px;
 }
-
-

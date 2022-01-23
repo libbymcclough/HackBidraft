@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react"
-import { Route, Switch } from "react-router-dom"
+import { Route, Switch, Link } from "react-router-dom"
 import Header from "./Header"
 import InputTodo from "./InputTodo"
 import TodosList from "./TodosList";
 import { v4 as uuidv4 } from "uuid";
-import jazzercise_img from "./jazzercise.png"
-import pilates_img from "./pilates.png"
-import aerobics_img from "./aerobics.png"
-// import history from './../history';
-// import { Link, useRouteMatch, Route } from "react-router-dom"
 
-import About from "../pages/About"
+import Workout from "../pages/Workout"
 import NotMatch from "../pages/NotMatch"
 import Navbar from "./Navbar";
 import Final from "../pages/Final"
+import jazzercise_img from "./jazzercise.png"
+import pilates_img from "./pilates.png"
+import aerobics_img from "./aerobics.png"
 
 const TodoContainer = () => {
 
@@ -81,17 +79,6 @@ const TodoContainer = () => {
     )
   }
 
-  // const Button1 {
-  // background-color: black;
-  // color: white;
-  // font-size: 20px;
-  // padding: 10px 60px;
-  // border-radius: 5px;
-  // margin: 10px 0px;
-  // cursor: pointer;
-
-  // }
-
   return (   
     <>
       <Navbar />
@@ -107,17 +94,16 @@ const TodoContainer = () => {
                 deleteTodoProps={delTodo}
                 setUpdate ={setUpdate} 
               /> */}
-
               <div className="button_container">
-              <button className="home_button"> <img src={jazzercise_img} /> <h2> Jazzercise </h2> </button>
-              <button className="home_button" ><img src={aerobics_img} /> <h2> Aerobics </h2> </button>
-              <button className="home_button"> <img src={pilates_img} /><h2> Pilates </h2> </button>
-              </div>
+              <button className="home_button"> <img src={jazzercise_img} /> <h2> Jazzercise </h2> <Link to="/Workout"> Start! </Link></button>
+              <button className="home_button" ><img src={aerobics_img} /> <h2> Aerobics </h2> <Link to="/Workout"> Start! </Link></button>
+              <button className="home_button"> <img src={pilates_img} /><h2> Pilates </h2> <Link to="/Workout"> Start! </Link></button>
             </div>
           </div>
+          </div>
         </Route>
-        <Route path= "/about">
-          <About />
+        <Route path= "/Workout">
+          <Workout />
         </Route>
         <Route path= "/final">
           <Final />

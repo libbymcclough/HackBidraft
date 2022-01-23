@@ -18,8 +18,8 @@ const Navbar = () => {
     }, 
     {
       id: 2,
-      path: "/about",
-      text: "About",
+      path: "/Workout",
+      text: "Workout",
     },
     { id: 3,
     path: "final",
@@ -44,7 +44,7 @@ const Navbar = () => {
             style={{color: "#fff", width: "40px", height: "40px" }} 
           /> : 
           <FiMenu 
-            style={{color: "#7b7b7b", width: "40px", height: "40px" }} 
+            style={{color: "#fff", width: "40px", height: "40px" }} 
           />
         }
       </button>
